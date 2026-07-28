@@ -89,4 +89,41 @@ export function CartProvider({ children }: CartProviderProps) {
     }
 
     // 장바구니 비우기
+    const clearCart = () => {
+        setItems([])
+    }
+
+    // 총 금액 계산
+    const totalPrice = items.reduce(
+        (sum, item) => sum + item.product.price * item.quantity, 0
+    )
+
+    // 총 아이템 수
+    const totalItems = items.reduce(
+        (sum, item) => sum + item.quantity, 0
+    )
+
+    const value: CartContextType = {
+        items,
+        addToCart,
+        removeFromCart,
+        updateQuantity,
+        clearCart,
+        totalPrice,
+        totalItems
+    }
+
+    return (
+        <CartContext.Provider value={value}>
+            {children}
+        </CartContext.Provider>
+    )
+}
+
+export function useCart() {
+    const context = useContext(CartContext)
+    if (context === undefined) {
+        throw new Error('useCart는 CartProvider 안에서만 사용할 수 있습니다.')
+    }
+    return context
 }
