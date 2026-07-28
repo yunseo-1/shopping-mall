@@ -1,9 +1,10 @@
 // 장바구니
 /*
-- 장바구니 아이템 관리
+- 장바구니 상태를 전역으로 관리
 - 상품 추가 / 삭제
 - 수량 변경
-- 총액 계산
+- 총 금액 계산
+- localStorage에 저장하여 새로고침 후에도 유지
 */
 
 import { createContext, useState, useContext, useEffect } from 'react';

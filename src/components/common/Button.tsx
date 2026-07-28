@@ -1,4 +1,4 @@
-import { ReactNode, ButtonHTMLAttributes } from 'react';
+import type { ReactNode, ButtonHTMLAttributes } from 'react';
 import styles from './Button.module.css';
 
 // 타입 정의 부분
