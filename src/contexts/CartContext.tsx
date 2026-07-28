@@ -6,8 +6,9 @@
 - 총액 계산
 */
 
-import { createContext, useState, useContext, ReactNode, useEffect } from 'react';
-import { CartItem, Product } from '../types';
+import { createContext, useState, useContext, useEffect } from 'react';
+import type { ReactNode } from 'react'
+import type { CartItem, Product } from '../types';
 
 interface CartContextType {
     items: CartItem[];
@@ -19,6 +20,7 @@ interface CartContextType {
     totalItems: number
 }
 
+// 실제 값 공급
 const CartContext = createContext<CartContextType | undefined>(undefined)
 
 interface CartProviderProps {

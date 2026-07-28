@@ -5,8 +5,9 @@
 - 카테고리 필터링
 - 베스트 / 신상품 조회
 */
-import { createContext, useState, useContext, ReactNode } from 'react';
+import { createContext, useState, useContext } from 'react';
 import type { Product, Category, FilterState } from '../types';
+import type { ReactNode } from 'react'
 import { PRODUCTS } from '../data/products';
 
 
