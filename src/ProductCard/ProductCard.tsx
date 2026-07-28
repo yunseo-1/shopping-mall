@@ -61,4 +61,4 @@ function ProductCard({ product }: ProductCardProps) {
   );
 }
 
-export default ProductCard; 
+export default ProductCard;
