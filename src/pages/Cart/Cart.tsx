@@ -109,7 +109,7 @@ export default function Cart() {
 
                 <div className={styles.summaryRow}>
                     <span>상품 금액</span>
-                    <span>{totalPrice.toLcaleString()}원</span>
+                    <span>{totalPrice.toLocaleString()}원</span>
                 </div>
 
                 <div className={styles.summaryRow}>
@@ -122,7 +122,7 @@ export default function Cart() {
                 <div className={`${styles.summaryRow} ${styles.total}`}>
                     <span>총 결제 금액</span>
                     <span className={styles.totalPrice}>
-                        {(totalPrice + (totalPrice >= 50000 ? 0 : 3000)).toLcaleString()}원
+                        {(totalPrice + (totalPrice >= 50000 ? 0 : 3000)).toLocaleString()}원
                     </span>
                 </div>
 
