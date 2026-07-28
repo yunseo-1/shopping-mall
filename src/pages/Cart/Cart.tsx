@@ -46,9 +46,12 @@ export default function Cart() {
                                 {/* 선택한 옵션 */}
                                 {item.selectedOptions && (
                                     <p className={styles.options}>
-                                        {Object.entries(item.selectedOptions).map(([key, value]) => (
+                                        {Object.entries(item.selectedOptions)
+                                            .map(([key, value]) => `${key}: ${value}`)
+                                            .join(' / ')}
+                                        {/* {Object.entries(item.selectedOptions).map(([key, value]) => (
                                             <span key={key}>{key}: {value}</span>
-                                        )).reduce((prev, curr) => <>{prev} / {curr}</>)}
+                                        )).reduce((prev, curr) => <>{prev} / {curr}</>)} */}
                                     </p>
                                 )}
 
